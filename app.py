@@ -61,7 +61,7 @@ app.layout = html.Div([
 def update_graph(selected_skill):
     # Filter data based on the selected skill
     filtered_df = df[df['Skills Required'].str.contains(selected_skill, na=False)]
-    
+    server = app.server
     # Update output text
     output_text = f"Showing job listings for {selected_skill} ({len(filtered_df)} jobs found)."
 
